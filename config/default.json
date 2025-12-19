@@ -1,0 +1,38 @@
+{
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4",
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "api_key_env": "OPENAI_API_KEY"
+  },
+  "tts": {
+    "provider": "elevenlabs",
+    "voice": "default",
+    "language": "en",
+    "speed": 1.0,
+    "api_key_env": "ELEVENLABS_API_KEY"
+  },
+  "podcast": {
+    "default_format": "interview",
+    "default_duration": 10,
+    "default_tone": "conversational"
+  },
+  "audio": {
+    "format": "mp3",
+    "bitrate": "192k",
+    "sample_rate": 44100,
+    "normalize": true,
+    "trim_silence": true
+  },
+  "files": {
+    "base_dir": "./data",
+    "output_format": "{podcast_name}/{episode_id}",
+    "cleanup_temp": true
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "podcaster.log"
+  }
+}

@@ -1,0 +1,44 @@
+# Podcaster Configuration
+
+# LLM Settings (for script generation)
+llm:
+  provider: "openai"  # openai, anthropic, local
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 2000
+  api_key_env: "OPENAI_API_KEY"
+
+# Text-to-Speech Settings (for audio generation)
+tts:
+  provider: "elevenlabs"  # elevenlabs, google, edge, coqui
+  voice: "default"
+  language: "en"
+  speed: 1.0
+  api_key_env: "ELEVENLABS_API_KEY"
+
+# Podcast Settings
+podcast:
+  default_format: "interview"  # interview, narrative, educational
+  default_duration: 10  # minutes
+  default_tone: "conversational"  # conversational, formal, humorous
+
+# Audio Processing
+audio:
+  format: "mp3"
+  bitrate: "192k"
+  sample_rate: 44100
+  normalize: true
+  trim_silence: true
+
+# File Management
+files:
+  base_dir: "./data"
+  output_format: "{podcast_name}/{episode_id}"
+  cleanup_temp: true
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "podcaster.log"
+

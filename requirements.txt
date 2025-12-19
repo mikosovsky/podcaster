@@ -1,0 +1,32 @@
+# Core dependencies
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Optional: Install based on your needs
+# Uncomment the sections you need
+
+# LLM providers
+# openai>=1.0.0
+# anthropic>=0.7.0
+
+# Speech-to-Text
+# openai-whisper>=20231117
+# torch>=2.0.0
+
+# Text-to-Speech
+# elevenlabs>=0.2.0
+# edge-tts>=6.1.0
+# TTS>=0.22.0
+
+# Audio processing
+# pydub>=0.25.0
+# soundfile>=0.12.0
+# ffmpeg-python>=0.2.0
+
+# Development tools
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+# isort>=5.12.0
