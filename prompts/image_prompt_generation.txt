@@ -1,0 +1,77 @@
+[PROMPT TEMPLATE: Thumbnail Image Prompt Generation]
+
+[DESCRIPTION] This prompt template generates prompts for AI image generation tools (e.g., DALL-E, Midjourney).
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: visual concept creator, art director, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{title}}: Episode title
+- {{topic}}: Main topic
+- {{key_themes}}: Key themes or concepts
+- {{script_summary}}: Brief script summary
+- {{style_preference}}: Visual style preference (realistic, illustrative, abstract)
+- {{color_scheme}}: Preferred color scheme (if any)
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Create detailed image generation prompt
+2. Capture the essence of the podcast topic
+3. Design for thumbnail visibility (clear, bold, readable)
+4. Consider platform requirements (1920x1080 for YouTube)
+5. Include visual elements that represent content
+6. Specify style, lighting, composition
+7. Avoid text in image (add separately if needed)
+8. Make it eye-catching and click-worthy
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify output format:
+- Main image prompt (detailed description)
+- Style modifiers (art style, lighting, mood)
+- Negative prompt (things to avoid)
+- Suggested text overlay (if any)
+- Alternative concepts (2-3 variations)
+
+---
+
+IMAGE REQUIREMENTS:
+[TODO] Define image specifications:
+- Aspect ratio: 16:9 (YouTube standard)
+- Resolution: 1920x1080 minimum
+- File format: JPG or PNG
+- Visual clarity for small thumbnails
+- High contrast and readability
+
+---
+
+VISUAL ELEMENTS TO CONSIDER:
+[TODO] List visual elements:
+- Central subject or focal point
+- Background elements
+- Color psychology
+- Typography considerations
+- Brand consistency (if applicable)
+- Cultural sensitivity
+
+---
+
+EXAMPLES:
+[TODO] Add example image prompts for different topics
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Clear and specific description
+- Visually compelling concept
+- Appropriate for topic
+- Thumbnail-optimized
+- Professional appearance

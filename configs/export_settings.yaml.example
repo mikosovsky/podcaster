@@ -1,0 +1,106 @@
+# Export Settings Configuration Example
+# [DESCRIPTION] Platform-specific export configuration
+
+youtube:
+  video:
+    resolution: "1920x1080"  # Options: 1920x1080, 1280x720, 3840x2160
+    frame_rate: 30  # Options: 24, 30, 60
+    video_codec: "h264"  # Options: h264, h265
+    video_bitrate: "5000k"
+    pixel_format: "yuv420p"
+    
+  audio:
+    codec: "aac"  # Options: aac, mp3
+    bitrate: "192k"  # Options: 128k, 192k, 256k, 320k
+    sample_rate: 44100  # Options: 44100, 48000
+    channels: 2  # Options: 1 (mono), 2 (stereo)
+    
+  thumbnail:
+    generate_prompt: true
+    dimensions: "1920x1080"  # YouTube recommended
+    format: "jpg"  # Options: jpg, png
+    quality: 95  # JPEG quality (1-100)
+    
+  metadata:
+    include_chapters: true
+    chapter_format: "youtube_description"  # Timestamps in description
+    include_tags: true
+    max_tags: 30
+    include_transcript: false
+    
+  upload_package:
+    create_upload_instructions: true
+    validate_before_export: true
+    compress_assets: false
+
+spotify:
+  audio:
+    format: "mp3"  # Spotify recommended format
+    bitrate: "320k"  # Options: 192k, 256k, 320k
+    sample_rate: 44100  # Spotify standard
+    channels: 2  # Stereo
+    codec: "libmp3lame"
+    quality: "best"
+    
+  metadata:
+    include_chapters: true
+    chapter_format: "id3"  # ID3 tags for chapters
+    include_show_notes: true
+    show_notes_format: "html"  # Options: plain, html, markdown
+    
+  upload_package:
+    create_upload_instructions: true
+    validate_before_export: true
+    generate_rss_ready: false  # For RSS feed integration
+    
+  content_advisory:
+    explicit: false  # Set to true if content is explicit
+    include_content_warnings: false
+
+common:
+  output_structure:
+    create_dated_folders: true
+    folder_naming: "YYYY-MM-DD_podcast_name"
+    include_source_files: false  # Include intermediate files
+    
+  quality_checks:
+    validate_audio_integrity: true
+    check_audio_levels: true
+    verify_metadata_completeness: true
+    check_file_sizes: true
+    
+  archival:
+    create_backup: false
+    backup_location: null
+    keep_intermediate_files: false
+    
+  accessibility:
+    generate_transcript: false
+    transcript_format: "srt"  # Options: srt, vtt, txt
+    include_closed_captions: false
+
+# File naming conventions
+naming_conventions:
+  audio_file: "{project_name}_{date}_{platform}"
+  video_file: "{project_name}_{date}_youtube"
+  metadata_file: "{project_name}_{date}_metadata"
+  thumbnail_file: "{project_name}_{date}_thumbnail"
+  transcript_file: "{project_name}_{date}_transcript"
+  
+# Platform-specific requirements and limits
+platform_limits:
+  youtube:
+    max_title_length: 100
+    max_description_length: 5000
+    max_tags_count: 30
+    max_tag_length: 30
+    max_video_size_gb: 256
+    max_duration_hours: 12
+    
+  spotify:
+    max_title_length: 200
+    max_description_length: 4000
+    max_episode_size_gb: 1
+    recommended_audio_format: "mp3"
+    min_bitrate: "96k"
+    max_bitrate: "320k"

@@ -1,0 +1,62 @@
+[PROMPT TEMPLATE: Chapter Markers Generation]
+
+[DESCRIPTION] This prompt template generates chapter markers with timestamps.
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: content organizer, chapter creator, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{script}}: The full podcast script with section markers
+- {{audio_duration}}: Total audio duration in seconds
+- {{outline}}: Original outline with estimated durations
+- {{section_markers}}: Identified section breaks in script
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Identify natural chapter breaks in content
+2. Create descriptive chapter titles
+3. Calculate timestamp for each chapter
+4. Ensure chapters are meaningful segments
+5. Keep chapter titles concise but descriptive
+6. Aim for 3-8 chapters depending on duration
+7. Make sure timestamps are accurate
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify output format:
+- JSON array of chapter objects
+- Each chapter: title, start_time (HH:MM:SS), end_time (optional)
+- Sorted chronologically
+- First chapter starts at 00:00:00
+
+---
+
+CHAPTER GUIDELINES:
+[TODO] Define chapter creation rules:
+- Minimum chapter length: 2-3 minutes
+- Maximum chapter length: 15-20 minutes
+- Natural content breaks
+- Descriptive but brief titles
+- YouTube: max 100 chars per title
+
+---
+
+EXAMPLES:
+[TODO] Add example chapter structures
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Accurate timestamps
+- Meaningful segments
+- Descriptive titles
+- Appropriate number of chapters
+- Easy navigation

@@ -1,0 +1,65 @@
+[PROMPT TEMPLATE: Description Generation]
+
+[DESCRIPTION] This prompt template generates comprehensive podcast descriptions.
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: content marketer, description writer, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{script}}: The full podcast script or summary
+- {{title}}: Generated title
+- {{topic}}: Main topic
+- {{key_points}}: Key points covered
+- {{duration}}: Episode duration
+- {{platform}}: Target platform (YouTube, Spotify)
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Create comprehensive yet concise description
+2. Start with hook in first 2-3 lines
+3. Summarize main content points
+4. Include relevant keywords naturally
+5. Add timestamps for chapters (if available)
+6. End with call-to-action if appropriate
+7. Format for readability (paragraphs, line breaks)
+8. Consider platform-specific requirements
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify output format:
+- Opening hook (1-2 sentences)
+- Main description (2-3 paragraphs)
+- Key topics covered (bullet points)
+- Timestamps (if chapters available)
+- Closing/call-to-action
+
+---
+
+PLATFORM-SPECIFIC NOTES:
+YouTube:
+[TODO] YouTube-specific requirements (character limits, formatting)
+
+Spotify:
+[TODO] Spotify-specific requirements
+
+---
+
+EXAMPLES:
+[TODO] Add example descriptions
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Engaging opening
+- Accurate content summary
+- Good SEO keywords
+- Readable formatting
+- Appropriate length

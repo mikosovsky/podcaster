@@ -1,0 +1,52 @@
+[PROMPT TEMPLATE: Research and Outline Generation]
+
+[DESCRIPTION] This prompt template is used to generate research-based outlines for podcast episodes.
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: expert researcher, content organizer, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{topic}}: The main topic or theme for the podcast
+- {{duration}}: Target duration in minutes
+- {{style}}: Content style (e.g., educational, conversational, storytelling)
+- {{complexity_level}}: Target audience complexity level
+- {{additional_context}}: Any additional user-provided context
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Research the topic thoroughly
+2. Identify key points and subtopics
+3. Organize into logical sections
+4. Estimate time for each section
+5. Include interesting facts or examples
+6. Maintain appropriate complexity level
+7. Consider flow and transitions
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify expected output structure:
+- JSON format with sections array
+- Each section should have: title, key_points, estimated_duration
+- Include research_notes field
+- Total duration should match target
+
+---
+
+EXAMPLES:
+[TODO] Add example inputs and expected outputs
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Accuracy and factual correctness
+- Logical organization
+- Appropriate depth for duration
+- Engaging content selection

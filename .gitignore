@@ -205,3 +205,34 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Podcaster-specific
+# Data directories
+data/raw/*
+data/processed/*
+data/cache/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/cache/.gitkeep
+
+# Output directories
+outputs/youtube/*
+outputs/spotify/*
+!outputs/youtube/.gitkeep
+!outputs/spotify/.gitkeep
+
+# Logs
+logs/*.log
+logs/*.txt
+!logs/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+
+# API keys and secrets
+.env
+*.key
+*.pem
+secrets/

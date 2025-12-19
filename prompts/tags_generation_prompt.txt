@@ -1,0 +1,72 @@
+[PROMPT TEMPLATE: Tags/Keywords Generation]
+
+[DESCRIPTION] This prompt template generates relevant tags and keywords for SEO.
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: SEO specialist, keyword researcher, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{script}}: The full podcast script or summary
+- {{title}}: Episode title
+- {{topic}}: Main topic
+- {{description}}: Episode description
+- {{platform}}: Target platform (YouTube, Spotify)
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Extract main topics and themes
+2. Identify relevant keywords for SEO
+3. Include both broad and specific terms
+4. Consider search intent and discoverability
+5. Mix popular and long-tail keywords
+6. Avoid overly generic tags
+7. Consider platform-specific tag limits
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify output format:
+- Primary tags (5-10): Most relevant, high-level
+- Secondary tags (10-15): More specific topics
+- Long-tail keywords (5-10): Specific phrases
+- All tags lowercase, comma-separated or array format
+
+---
+
+PLATFORM-SPECIFIC NOTES:
+YouTube:
+[TODO] YouTube tag requirements (up to 500 chars total, 30 char limit per tag)
+
+Spotify:
+[TODO] Spotify tag/category requirements
+
+---
+
+TAG CATEGORIES:
+[TODO] Define tag categories to include:
+- Topic/subject tags
+- Format tags (podcast, audio, interview, etc.)
+- Industry/niche tags
+- Audience tags
+- Content type tags
+
+---
+
+EXAMPLES:
+[TODO] Add example tag sets
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Relevant to content
+- Good search volume potential
+- Mix of broad and specific
+- Platform-appropriate
+- Avoid spam or irrelevant tags

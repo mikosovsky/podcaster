@@ -1,0 +1,101 @@
+# TTS Voices Configuration Example
+# [DESCRIPTION] Configuration for available ElevenLabs voices
+
+voices:
+  - id: "voice_id_1"
+    name: "Professional Male"
+    language: "en-US"
+    gender: "male"
+    age_range: "adult"
+    accent: "American"
+    style: "authoritative, clear, professional"
+    use_cases:
+      - news
+      - educational
+      - corporate
+      - documentary
+    voice_settings:
+      recommended_stability: 0.75
+      recommended_similarity_boost: 0.75
+    
+  - id: "voice_id_2"
+    name: "Friendly Female"
+    language: "en-US"
+    gender: "female"
+    age_range: "adult"
+    accent: "American"
+    style: "warm, conversational, approachable"
+    use_cases:
+      - storytelling
+      - lifestyle
+      - interviews
+      - casual content
+    voice_settings:
+      recommended_stability: 0.70
+      recommended_similarity_boost: 0.80
+    
+  - id: "voice_id_3"
+    name: "Energetic Host"
+    language: "en-US"
+    gender: "male"
+    age_range: "young adult"
+    accent: "American"
+    style: "enthusiastic, dynamic, engaging"
+    use_cases:
+      - entertainment
+      - sports
+      - gaming
+      - youth content
+    voice_settings:
+      recommended_stability: 0.60
+      recommended_similarity_boost: 0.70
+    
+  - id: "voice_id_4"
+    name: "Calm Narrator"
+    language: "en-US"
+    gender: "neutral"
+    age_range: "adult"
+    accent: "American"
+    style: "soothing, measured, thoughtful"
+    use_cases:
+      - meditation
+      - audiobooks
+      - nature content
+      - relaxation
+    voice_settings:
+      recommended_stability: 0.85
+      recommended_similarity_boost: 0.75
+    
+  - id: "voice_id_5"
+    name: "British Academic"
+    language: "en-GB"
+    gender: "male"
+    age_range: "mature adult"
+    accent: "British (RP)"
+    style: "scholarly, refined, articulate"
+    use_cases:
+      - academic content
+      - history
+      - science
+      - literature
+    voice_settings:
+      recommended_stability: 0.80
+      recommended_similarity_boost: 0.75
+
+# Voice Selection Guidelines
+guidelines:
+  matching_voice_to_content:
+    - "Consider the target audience demographics"
+    - "Match voice energy to content pace"
+    - "Ensure accent matches content context"
+    - "Test multiple voices for best fit"
+  
+  voice_settings_tips:
+    stability:
+      - "Higher (0.75-1.0): More consistent, professional"
+      - "Lower (0.0-0.50): More expressive, varied"
+      - "Medium (0.50-0.75): Balanced approach"
+    similarity_boost:
+      - "Higher (0.75-1.0): Closer to original voice"
+      - "Lower (0.0-0.50): More generalized"
+      - "Medium (0.50-0.75): Balanced approach"

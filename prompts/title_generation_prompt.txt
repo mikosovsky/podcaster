@@ -1,0 +1,52 @@
+[PROMPT TEMPLATE: Title Generation]
+
+[DESCRIPTION] This prompt template generates engaging podcast titles.
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: title creator, marketing copywriter, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{script}}: The full podcast script or summary
+- {{topic}}: Main topic
+- {{key_points}}: Key points covered
+- {{target_audience}}: Target audience description
+- {{platform}}: Target platform (YouTube, Spotify, both)
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Create engaging, click-worthy title
+2. Keep within character limits (YouTube: 100 chars, Spotify: flexible)
+3. Include relevant keywords
+4. Make it descriptive but intriguing
+5. Consider SEO optimization
+6. Avoid clickbait that misrepresents content
+7. Match the tone of the content
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify output format:
+- Primary title
+- 2-3 alternative titles
+- Brief explanation of each title's strategy
+
+---
+
+EXAMPLES:
+[TODO] Add example titles for different content types
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Clear and descriptive
+- Engaging and interesting
+- Appropriate length
+- Keyword-rich
+- Platform-appropriate

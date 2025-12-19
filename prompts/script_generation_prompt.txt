@@ -1,0 +1,57 @@
+[PROMPT TEMPLATE: Script Generation]
+
+[DESCRIPTION] This prompt template converts outlines into complete podcast scripts.
+
+---
+
+SYSTEM ROLE:
+[TODO] Define the AI's role: podcast scriptwriter, content creator, etc.
+
+---
+
+USER INPUT PLACEHOLDERS:
+- {{outline}}: The structured outline from research phase
+- {{topic}}: Main topic/theme
+- {{style}}: Script style (casual, formal, educational, storytelling)
+- {{tone}}: Tone of voice (friendly, authoritative, enthusiastic)
+- {{pacing}}: Speech pacing (slow, medium, fast)
+- {{duration}}: Target duration
+- {{voice_description}}: Description of the voice that will read the script
+
+---
+
+INSTRUCTIONS SECTION:
+[TODO] Define instructions for the AI:
+1. Convert outline into natural, flowing script
+2. Use conversational language appropriate for audio
+3. Include transitions between sections
+4. Add emphasis markers where needed
+5. Write for clear pronunciation
+6. Maintain consistent tone throughout
+7. Keep sentences at appropriate length for speech
+8. Include pauses or timing notes if needed
+
+---
+
+OUTPUT FORMAT REQUIREMENTS:
+[TODO] Specify expected script format:
+- Plain text or markdown
+- Section headers for each major section
+- Clear paragraph breaks
+- Include [PAUSE] markers if needed
+- Include pronunciation guides for difficult words
+
+---
+
+EXAMPLES:
+[TODO] Add example outline to script conversions
+
+---
+
+QUALITY GUIDELINES:
+[TODO] Define quality criteria:
+- Natural speech patterns
+- Clear and engaging
+- Appropriate vocabulary
+- Good pacing and rhythm
+- Smooth transitions

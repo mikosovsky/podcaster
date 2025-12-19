@@ -1,0 +1,62 @@
+# Podcast Configuration Example
+# [DESCRIPTION] Main configuration file for podcast generation settings
+
+general:
+  project_name: "My Podcast Project"
+  language: "en-US"
+  output_format: "both"  # Options: audio, video, both
+  
+content:
+  default_duration_minutes: 15
+  tone: "casual"  # Options: casual, formal, educational, storytelling, conversational
+  pacing: "medium"  # Options: slow, medium, fast
+  complexity_level: "intermediate"  # Options: beginner, intermediate, advanced
+  
+openai:
+  model: "gpt-4"  # Options: gpt-4, gpt-3.5-turbo, gpt-4-turbo
+  temperature: 0.7  # Range: 0.0-1.0 (higher = more creative)
+  max_tokens: 4000
+  retry_config:
+    max_retries: 3
+    initial_delay_seconds: 2
+    backoff_multiplier: 2
+  
+elevenlabs:
+  voice_id: "default_voice_id"  # See tts_voices.yaml for available voices
+  model_id: "eleven_monolingual_v1"
+  voice_settings:
+    stability: 0.75  # Range: 0.0-1.0
+    similarity_boost: 0.75  # Range: 0.0-1.0
+  audio_format: "mp3_44100_128"  # Options: mp3_44100_128, mp3_44100_192, pcm_24000, pcm_44100
+  optimize_streaming_latency: 0  # Range: 0-4 (higher = faster, lower quality)
+  
+audio_processing:
+  normalize_volume: true
+  target_loudness_db: -16  # LUFS
+  remove_silence: true
+  silence_threshold_db: -50
+  min_silence_duration_ms: 1000
+  fade_in_duration_seconds: 0.5
+  fade_out_duration_seconds: 1.0
+  intro_audio_path: null  # Path to intro audio file or null
+  outro_audio_path: null  # Path to outro audio file or null
+  
+export:
+  youtube:
+    enabled: true
+    video_resolution: "1920x1080"
+    video_format: "mp4"
+    audio_codec: "aac"
+    audio_bitrate: "192k"
+    include_chapters: true
+    generate_thumbnail_prompt: true
+    
+  spotify:
+    enabled: true
+    audio_format: "mp3"
+    audio_bitrate: "320k"
+    include_chapters: true
+    
+  common:
+    generate_transcript: false
+    metadata_format: "json"  # Options: json, yaml
