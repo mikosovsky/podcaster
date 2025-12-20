@@ -1,0 +1,7 @@
+python-dotenv
+pytest
+pydantic-settings
+pydantic
+langchain
+langchain-openai
+ruff
