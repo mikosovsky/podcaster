@@ -3,6 +3,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class LLMConfig(BaseSettings):
     """Configuration for the language model."""
+
     model_config = SettingsConfigDict(
         env_file=".env", env_file_encoding="utf-8", env_prefix="OPENAI_", extra="ignore"
     )
@@ -12,6 +13,7 @@ class LLMConfig(BaseSettings):
 
 class TTSConfig(BaseSettings):
     """Configuration for the text-to-speech service."""
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
@@ -26,6 +28,7 @@ class TTSConfig(BaseSettings):
 
 class PromptConfig(BaseSettings):
     """Configuration for story prompt generation."""
+
     model_config = SettingsConfigDict(
         env_file=".env", env_file_encoding="utf-8", env_prefix="STORY_", extra="ignore"
     )
