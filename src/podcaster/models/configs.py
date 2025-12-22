@@ -21,6 +21,7 @@ class TTSConfig(BaseSettings):
         extra="ignore",
     )
     API_KEY: str
+    MODEL_ID: str
     MALE_VOICE_ID: str
     FEMALE_VOICE_ID: str
     SPEED: float

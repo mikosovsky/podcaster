@@ -1,9 +1,11 @@
 from pydantic import BaseModel, Field
 from enum import Enum
 
+
 class Sex(str, Enum):
     MALE = "male"
     FEMALE = "female"
+
 
 class StorySchema(BaseModel):
     title: str = Field(..., description="The title of the story")
