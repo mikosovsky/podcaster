@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -10,6 +10,7 @@ class LLMConfig(BaseSettings):
     SCRIPT_LENGTH_LETTERS_MIN: int = Field(..., alias="SCRIPT_LENGTH_LETTERS_MIN")
     SCRIPT_LENGTH_LETTERS_MAX: int = Field(..., alias="SCRIPT_LENGTH_LETTERS_MAX")
     SCRIPT_LENGTH_MINUTES: int = Field(..., alias="SCRIPT_LENGTH_MINUTES")
+
 
 class TTSConfig(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
