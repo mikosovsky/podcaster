@@ -1,4 +1,4 @@
-from models.configs import PromptConfig
+from podcaster.models.configs import PromptConfig
 
 
 def load_story_prompt() -> str:
