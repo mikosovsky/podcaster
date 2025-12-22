@@ -22,10 +22,8 @@ The story must strictly follow this narrative order:
 2. Rising Action  
 3. Conflict  
 4. Comeback  
-5. Conflict  
-6. Comeback  
-7. Rising Action  
-8. Payoff  
+5. Rising Action  
+6. Payoff  
 
 The transitions must feel natural and seamless.
 The ending (payoff) should emotionally or narratively connect back to the hook, giving a subtle “looped” feeling.
