@@ -1,7 +1,6 @@
 """Tests for the providers.openai module."""
 
-import pytest
-from unittest.mock import Mock, patch, MagicMock
+from unittest.mock import Mock, patch
 
 from podcaster.providers.openai import StoryTeller
 from podcaster.models.schemas import StorySchema

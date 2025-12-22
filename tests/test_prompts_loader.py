@@ -1,12 +1,8 @@
 """Tests for the prompts.loader module."""
 
-import os
-import tempfile
 import pytest
-from unittest.mock import patch, MagicMock
 
 from podcaster.prompts.loader import load_story_prompt
-from podcaster.models.configs import PromptConfig
 
 
 class TestLoadStoryPrompt:
