@@ -1,9 +1,9 @@
 from langchain_openai import ChatOpenAI
-from models.configs import LLMConfig
-from models.schemas import StorySchema
+from podcaster.models.configs import LLMConfig
+from podcaster.models.schemas import StorySchema
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
-from prompts.loader import load_story_prompt
+from podcaster.prompts.loader import load_story_prompt
 
 
 class StoryTeller:
