@@ -30,7 +30,7 @@ class SpeechSynthesizer:
                 else self.female_voice_id
             )
             text_to_speak = story_schema.content
-            
+
         audio = self.client.text_to_speech.convert_with_timestamps(
             text=text_to_speak,
             voice_id=voice_id,
