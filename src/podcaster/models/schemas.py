@@ -14,5 +14,5 @@ class StorySchema(BaseModel):
     sex: Sex = Field(..., description="The sex of the main character.")
     keywords: list[str] = Field(
         default_factory=list,
-        description="List of keywords associated with the story e.g., ['reddit', 'funny']",
+        description="List of keywords associated with the story e.g., ['reddit', 'funny'] for Youtube shorts",
     )
