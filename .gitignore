@@ -5,7 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
-
+configs/*.mp4
+configs/*.ttf
 # Distribution / packaging
 .Python
 build/
