@@ -4,7 +4,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.utils.pydantic import TBaseModel
 from pydantic import SkipValidation
-from typing import Annotated, type
+from typing import Annotated
 
 
 class StoryTeller:
