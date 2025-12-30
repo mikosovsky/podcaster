@@ -26,7 +26,7 @@ class TwoLineSegment:
     start: float
     end: float
     words: Tuple[WordSpan, ...]
-    cut_index: int  # miejsce podziału na 2 linie
+    cut_index: int  # section between line 1 and line 2
 
 
 @dataclass
