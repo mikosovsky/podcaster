@@ -14,7 +14,14 @@ class StoryTeller:
         self,
         pydantic_object: Annotated[type[TBaseModel], SkipValidation()],
         system_prompt: str = "",
+        is_web_search: bool = False,
     ):
+        """Initialize the StoryTeller with a Pydantic model and system prompt.
+        Args:
+            pydantic_object (Annotated[type[TBaseModel], SkipValidation()]): The Pydantic model for output parsing.
+            system_prompt (str): The system prompt to guide the language model.
+            is_web_search (bool): Whether to enable web search tool integration.
+        """
         llm_config = LLMConfig()
         self.model = ChatOpenAI(
             model=llm_config.MODEL, api_key=llm_config.API_KEY, use_responses_api=True
@@ -27,6 +34,8 @@ class StoryTeller:
                 "format_instructions": self.output_parser.get_format_instructions()
             },
         )
+        if is_web_search:
+            self.model = self.model.bind_tools([{"type": "web_search"}])
         self.chain = self.prompt_template | self.model | self.output_parser
 
     def generate_answer(
