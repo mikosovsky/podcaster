@@ -1,34 +1,41 @@
 from langchain_openai import ChatOpenAI
 from models.configs import LLMConfig
-from models.schemas import StorySchema
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
-from prompts.loader import load_story_prompt
+from langchain_core.utils.pydantic import TBaseModel
+from pydantic import SkipValidation
+from typing import Annotated, type
 
 
 class StoryTeller:
-    """StoryTeller uses OpenAI's language model to generate stories based on provided data."""
+    """StoryTeller uses OpenAI's language model to generate answers based on provided data."""
 
-    def __init__(self):
+    def __init__(
+        self,
+        pydantic_object: Annotated[type[TBaseModel], SkipValidation()],
+        system_prompt: str = "",
+    ):
         llm_config = LLMConfig()
-        self.model = ChatOpenAI(model=llm_config.MODEL, api_key=llm_config.API_KEY)
-        self.output_parser = PydanticOutputParser(pydantic_object=StorySchema)
-        system_prompt = load_story_prompt()
+        self.model = ChatOpenAI(
+            model=llm_config.MODEL, api_key=llm_config.API_KEY, use_responses_api=True
+        )
+        self.output_parser = PydanticOutputParser(pydantic_object=pydantic_object)
         self.prompt_template = PromptTemplate(
-            template=system_prompt
-            + "\nLast best stories data:\n{stories_list}\n{format_instructions}",
-            input_variables=["stories_list"],
+            template=system_prompt + "\n{user_prompt}\n{format_instructions}",
+            input_variables=["user_prompt"],
             partial_variables={
                 "format_instructions": self.output_parser.get_format_instructions()
             },
         )
         self.chain = self.prompt_template | self.model | self.output_parser
 
-    def generate_story(self, stories_list: str) -> StorySchema:
-        """Generate a story based on the provided stories list.
+    def generate_answer(
+        self, prompt: str
+    ) -> Annotated[type[TBaseModel], SkipValidation()]:
+        """Generate a answer based on the provided user prompt.
         Args:
-            stories_list (str): A string containing the list of 3 most viewed stories.
+            prompt (str): The user prompt to generate the answer for.
         Returns:
-                StorySchema: The generated story in the form of a StorySchema object."""
-        result = self.chain.invoke({"stories_list": stories_list})
+                Annotated[type[TBaseModel], SkipValidation()]: The generated answer as a Pydantic model instance."""
+        result = self.chain.invoke({"user_prompt": prompt})
         return result
